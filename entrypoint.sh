@@ -29,6 +29,7 @@ else
 fi
 
 git stash pop
+rm .gitignore
 git add .
 git commit -m "${INPUT_COMMIT_MESSAGE}"
 git push --set-upstream origin "${INPUT_BRANCH}"
