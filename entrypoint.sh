@@ -20,7 +20,7 @@ git_setup
 git remote update
 git fetch --all
 
-git stash
+# git stash
 
 # Will create branch if it does not exist
 if [[ $( git branch -r | grep "$INPUT_BRANCH" ) ]]; then
@@ -29,7 +29,7 @@ else
    git checkout -b "${INPUT_BRANCH}"
 fi
 
-git stash pop
+# git stash pop
 rm .gitignore
 cat web/sites/sbf/settings.php
 git status
