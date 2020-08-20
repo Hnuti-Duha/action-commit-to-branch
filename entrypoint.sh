@@ -30,6 +30,8 @@ fi
 
 git stash pop
 rm .gitignore
+cat web/sites/sbf/settings.php
+git status
 git add .
 git commit -m "${INPUT_COMMIT_MESSAGE}"
 git push --set-upstream origin "${INPUT_BRANCH}"
