@@ -15,10 +15,14 @@ EOF
   git config --global user.name "$GITHUB_ACTOR"
 }
 
-cat web/sites/sbf/settings.php
+head -n 6 web/sites/sbf/settings.php
 git_setup
 git remote update
+echo "after remote update:"
+head -n 6 web/sites/sbf/settings.php
 git fetch --all
+echo "after fetch:"
+head -n 6 web/sites/sbf/settings.php
 git branch -r
 # git stash
 
