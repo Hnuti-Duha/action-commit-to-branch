@@ -19,7 +19,7 @@ cat web/sites/sbf/settings.php
 git_setup
 git remote update
 git fetch --all
-
+git branch -r
 # git stash
 
 # Will create branch if it does not exist
