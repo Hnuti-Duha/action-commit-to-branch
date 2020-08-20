@@ -15,6 +15,7 @@ EOF
   git config --global user.name "$GITHUB_ACTOR"
 }
 
+cat web/sites/sbf/settings.php
 git_setup
 git remote update
 git fetch --all
