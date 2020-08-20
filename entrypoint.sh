@@ -15,24 +15,19 @@ EOF
   git config --global user.name "$GITHUB_ACTOR"
 }
 
-head -n 6 web/sites/sbf/settings.php
 git_setup
 git remote update
-echo "after remote update:"
-head -n 6 web/sites/sbf/settings.php
 git fetch --all
-echo "after fetch:"
-head -n 6 web/sites/sbf/settings.php
 git branch -r
 # git stash
-
+git status
 # Will create branch if it does not exist
 if [[ $( git branch -r | grep "$INPUT_BRANCH" ) ]]; then
    git checkout "${INPUT_BRANCH}"
 else
    git checkout -b "${INPUT_BRANCH}"
 fi
-
+git status
 # git stash pop
 rm .gitignore
 cat web/sites/sbf/settings.php
