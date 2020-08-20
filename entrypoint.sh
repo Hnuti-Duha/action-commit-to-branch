@@ -27,10 +27,9 @@ if [[ $( git branch -r | grep "$INPUT_BRANCH" ) ]]; then
 else
    git checkout -b "${INPUT_BRANCH}"
 fi
-git status
 # git stash pop
 rm .gitignore
-cat web/sites/sbf/settings.php
+git cherry-pick master
 git status
 git add .
 git commit -m "${INPUT_COMMIT_MESSAGE}"
